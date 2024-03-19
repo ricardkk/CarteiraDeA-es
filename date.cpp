@@ -1,6 +1,6 @@
 #include "date.h"
 
-
+// fazem o tipo data poder ser lido com cin e exibido com cout, como um tipo básico
 ostream &operator<<(ostream &os, const tipoData &d) {
     os << d.dia << "/" << d.mes << "/" << d.ano;
     return os;

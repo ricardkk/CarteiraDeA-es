@@ -2,6 +2,7 @@
 #include "color.h"
 #include "text.h"
 
+// retorna a quantidade de empresas digitada pelo usuário
 int entradaQuantidadeEmpresa(cores corTexto, cores corFundo) {
 	int qntEmpresas;
 
@@ -12,6 +13,7 @@ int entradaQuantidadeEmpresa(cores corTexto, cores corFundo) {
 	return qntEmpresas;
 }
 
+// preenche o vetor dinâmico do tipo empresa
 void entradaVetorEmpresas(empresa * vetorDeEmpresas, int qntEmpresas, cores corTexto, cores corFundo){
 	for (int i = 0; i < qntEmpresas; i++) {
 		ajustaCor("Empresa: ", corTexto, Default); cin >> vetorDeEmpresas[i].nome;
@@ -24,6 +26,7 @@ void entradaVetorEmpresas(empresa * vetorDeEmpresas, int qntEmpresas, cores corT
 	}
 }
 
+// preenche os vetores de transação de cada empresa
 void entradaVetorTransacoes(empresa * vetorDeEmpresas, int qntEmpresas, cores corTexto, cores corFundo) {
 	exibeTextoAlinhado(" Transações realizadas \n\n", Default, corFundo, 0);
 	for (int i = 0; i < qntEmpresas; i++) {
